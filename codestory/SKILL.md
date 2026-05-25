@@ -20,17 +20,17 @@ https://github.com/user-attachments/assets/19541b87-13e7-4ed4-b5cb-e9d33967448a
 
 </p>
 
-Help teams **stick** what changed: high-level architecture, collaboration impact, and decisions that matter—not every line of diff. Output is a **Remotion** video (React), branded from the repo's **DESIGN.md**, saved under **`docs/codestory/`**, and linked at the **top of the PR description**.
+Help teams **stick** what changed: high-level architecture, collaboration impact, and decisions that matter—not every line of diff. Output is a **Remotion** video (React), branded from the repo's DESIGN.md.
 
 ## Principles
 
-- **Sticky, not exhaustive**: Prioritize decisions people must remember to manage the project later. Skip noise, formatting-only edits, and dependency bumps unless they change architecture or team workflow.
+- **Sticky, not exhaustive**: Prioritize decisions people must remember to manage the project later. Skip noise, formatting-only edits, and dependency bumps unless they change architecture or team responsibility.
 - **Visual-first**: Pull colors, typography, icon style, and layout rules from DESIGN.md. Use icons, diagrams, and motion—not walls of text.
 - **Two-phase gate**: Never render video until the user explicitly approves the script (see Phase 2).
 - **Human pace vs AI pace**: Frame the story for teammates who cannot read every AI-generated line; emphasize *why* and *who is affected*.
-- **Always audible**: Every render includes looping geek/modern background music plus a subtle scene-transition tick. Silent videos are not acceptable. The skill ships **three BGM options** in `assets/audio/` (`focus`, `energy`, `flow`) and **selects one** from PR/content signals via `scripts/select_bgm.sh`. See `references/audio.md`.
+- **Always audible**: Every render includes looping geek/modern background music plus a subtle scene-transition tick. Silent videos are not acceptable. The skill ships **three BGM options** in `assets/audio/` for different PR vibes.
 - **Centered frames**: All on-screen content is vertically and horizontally centered via `SceneShell`—no left-aligned slide decks.
-- **Scene progress feedback**: Each scene shows a bottom progress bar that starts **full** and **drains** to empty before the next scene, with a seconds-remaining label so viewers know when the cut happens.
+- **Scene progress feedback**: Each scene shows a bottom progress bar that starts **full** and **drains** to empty before the next scene, with a seconds-remaining label so viewers know when the current clip ends.
 
 ## Prerequisites
 
@@ -190,9 +190,17 @@ Prepend a video block to the **existing** PR body (do not erase unrelated conten
 bash <skill-root>/scripts/update_pr_body.sh docs/codestory/<pr-number>-codestory.mp4
 ```
 
-The script inserts a markdown header and link/embed at the top. See `references/pr-publish.md` for GitHub video/link patterns.
+The script inserts a markdown header and uses **GitHub's file attachment method** to ensure the video renders properly when opening or updating the PR. This method:
 
-Confirm with the user: PR URL, video path, and that `docs/codestory/` is ready to commit.
+1. **Uploads the video** as a GitHub asset (via `gh` or direct media upload)
+2. **Generates a markdown link** using the asset URL pattern: `https://github.com/user-attachments/assets/...`
+3. **Inserts at the top** of the PR body for immediate visibility
+
+This approach guarantees video playback works in all PR views (web UI, mobile, email notifications, etc.) and prevents broken links from relative blob paths.
+
+See `references/pr-publish.md` for GitHub video/link patterns and attachment workflows.
+
+Confirm with the user: PR URL, video asset URL, and that `docs/codestory/` is ready to commit.
 
 ---
 
@@ -217,7 +225,7 @@ Confirm with the user: PR URL, video path, and that `docs/codestory/` is ready t
 | `references/remotion-composition.md` | Building compositions |
 | `references/audio.md` | Background music + scene ticks |
 | `references/analysis-rubric.md` | Phase 1 analysis |
-| `references/pr-publish.md` | Updating PR body |
+| `references/pr-publish.md` | Updating PR body and video attachment |
 | `scripts/*.sh` | Automation for context, render, PR update |
 
 ---
@@ -229,6 +237,7 @@ Confirm with the user: PR URL, video path, and that `docs/codestory/` is ready t
 - **DESIGN.md missing**: Use defaults; flag for design follow-up.
 - **Render fails**: Capture stderr, fix dependencies in `docs/codestory/remotion/`, retry once, then report.
 - **User wants script only**: Stop after Phase 2; do not render.
+- **Video attachment fails**: Fall back to blob link pattern with warning that playback may be inconsistent across platforms.
 
 ---
 
