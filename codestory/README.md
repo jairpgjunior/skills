@@ -1,5 +1,7 @@
 # CodeStory
 
+## Demo
+
 <p align="center">
 
 https://github.com/user-attachments/assets/19541b87-13e7-4ed4-b5cb-e9d33967448a
@@ -33,8 +35,6 @@ The agent will draft a Pixar-style script in `docs/codestory/`, wait for your ap
 ## License
 
 MIT
-
-## Demo
 
 <video controls width="640">
   <source src="1-codestory.mp4" type="video/mp4">
