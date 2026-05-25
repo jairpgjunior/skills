@@ -1,9 +1,6 @@
 # CodeStory
 
-<video controls width="640">
-  <source src="1-codestory.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[![Demo](./_final_frame_preview.jpg)](./1-codestory.mp4)
 
 Agent Skill: turn GitHub PR changes into a short Remotion storytelling video for your team.
 

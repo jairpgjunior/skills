@@ -12,10 +12,7 @@ description: >-
 
 # CodeStory
 
-<video controls width="640">
-  <source src="1-codestory.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[![Demo](./_final_frame_preview.jpg)](./1-codestory.mp4)
 
 Help teams **stick** what changed: high-level architecture, collaboration impact, and decisions that matter—not every line of diff. Output is a **Remotion** video (React), branded from the repo's **DESIGN.md**, saved under **`docs/codestory/`**, and linked at the **top of the PR description**.
 
