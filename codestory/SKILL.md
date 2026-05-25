@@ -239,8 +239,3 @@ Confirm with the user: PR URL, video asset URL, and that `docs/codestory/` is re
 - **User wants script only**: Stop after Phase 2; do not render.
 - **Video attachment fails**: Fall back to blob link pattern with warning that playback may be inconsistent across platforms.
 
----
-
-## Optional: description optimization
-
-After the skill is stable and the user agrees, run skill-creator's description optimizer (`scripts/run_loop.py`) to improve trigger accuracy.
