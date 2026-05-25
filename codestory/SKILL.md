@@ -12,6 +12,8 @@ description: >-
 
 # CodeStory
 
+## Demo
+
 <p align="center">
 
 https://github.com/user-attachments/assets/19541b87-13e7-4ed4-b5cb-e9d33967448a
@@ -19,13 +21,6 @@ https://github.com/user-attachments/assets/19541b87-13e7-4ed4-b5cb-e9d33967448a
 </p>
 
 Help teams **stick** what changed: high-level architecture, collaboration impact, and decisions that matter—not every line of diff. Output is a **Remotion** video (React), branded from the repo's **DESIGN.md**, saved under **`docs/codestory/`**, and linked at the **top of the PR description**.
-
-## Demo
-
-<video controls width="640">
-  <source src="1-codestory.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
 ## Principles
 
