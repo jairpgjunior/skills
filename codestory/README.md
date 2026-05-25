@@ -1,6 +1,10 @@
 # CodeStory
 
-[![Demo](./_final_frame_preview.jpg)](./1-codestory.mp4)
+<p align="center">
+
+https://github.com/user-attachments/assets/19541b87-13e7-4ed4-b5cb-e9d33967448a
+
+</p>
 
 Agent Skill: turn GitHub PR changes into a short Remotion storytelling video for your team.
 
