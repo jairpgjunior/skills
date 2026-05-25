@@ -1,0 +1,23 @@
+{
+  "skill_name": "codestory",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "we just merged a bunch of AI-generated auth changes on this branch — run codestory on the open PR. DESIGN.md is in docs/. i want the script first before any video.",
+      "expected_output": "Collects PR context, finds docs/DESIGN.md, writes docs/codestory/<n>-script.md in Pixar format, asks for approval without rendering.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "codestory — the script at docs/codestory/42-script.md is approved. render the remotion video, save under docs/codestory, and put it at the top of the PR description.",
+      "expected_output": "Scaffolds or uses docs/codestory/remotion, renders mp4, updates PR body via gh, outputs committed paths.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "this PR only refactors imports but touches our new payments service boundary — still do a codestory, focus on what the team must remember for reviews and on-call.",
+      "expected_output": "Change brief emphasizes collaboration/on-call over trivial diffs; script highlights architecture boundary not every file.",
+      "files": []
+    }
+  ]
+}

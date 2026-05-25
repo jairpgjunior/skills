@@ -1,0 +1,52 @@
+{
+  "tracks": [
+    {
+      "id": "focus",
+      "file": "bgm-focus.mp3",
+      "label": "Focus",
+      "mood": "Calm, minimal pulse — dense architecture and security reads",
+      "use_when": [
+        "architecture",
+        "security",
+        "auth",
+        "migration",
+        "api",
+        "schema",
+        "infra",
+        "boundary"
+      ]
+    },
+    {
+      "id": "energy",
+      "file": "bgm-energy.mp3",
+      "label": "Energy",
+      "mood": "Upbeat geek pulse — large or high-impact diffs",
+      "use_when": [
+        "large_pr",
+        "breaking",
+        "major",
+        "release",
+        "refactor",
+        "performance",
+        "critical"
+      ]
+    },
+    {
+      "id": "flow",
+      "file": "bgm-flow.mp3",
+      "label": "Flow",
+      "mood": "Steady modern groove — collaboration, process, onboarding",
+      "use_when": [
+        "collaboration",
+        "team",
+        "review",
+        "docs",
+        "onboarding",
+        "workflow",
+        "ownership",
+        "process"
+      ]
+    }
+  ],
+  "tick": "scene-tick.mp3"
+}
